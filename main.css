@@ -1,0 +1,240 @@
+:root {
+  --clr-primary-200: #455ECB;
+  --clr-primary-400: #FFF;
+
+  --clr-neutral-100: #FFF;
+  --clr-neutral-900: #455ECB;
+  --clr-Text-black: #202020;
+
+  --clr-bg-black: #202020;
+
+  --clr-texthover: #2848DA;
+  --ff-primary: 'Arial', sans-serif;
+  --ff-accent: 'Andale', monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: boder-box;
+}
+/* Using rem over pixels will improve responsiveness */
+body {
+  font-family: var(--ff-primary);
+  font-weight: 400;
+  font-size: 1.3125rem;
+  line-height: 1.6;
+}
+
+/* Sets main visual attributes for the whole website */
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+/* Sets the design for all headings */
+h1,
+h3 {
+  color: var(--clr-primary-400);
+  font-family: var(--ff-accent);
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 0.1em;
+  font-size: 2em;
+}
+h1 {
+  font-size: 5rem;
+}
+
+
+h2,
+h3,
+p {
+  margin-bottom: 1em;
+}
+
+
+h2 {
+  font-size: 2em;
+  
+}
+/* Image Display */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+header,
+section {
+  padding: 4rem 0;
+}
+
+/* Mobile View */
+@media (min-width: 40em) {
+  header,
+  section {
+    padding: 7rem 0;
+  }
+}
+
+.container {
+  margin-inline: auto;
+  width: min(90%, 70.5rem)
+}
+
+footer {
+  margin-inline:auto;
+}
+/* Displayeds in a column format */
+.split {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 40em) {
+  .split {
+    flex-direction: row;
+  }
+
+  .split > * {
+    flex-basis: 100%;
+  }
+
+  .split > * + * {
+    margin-left: 2em;
+  }
+}
+
+.bg-light {
+  background-color: var(--clr-primary-200);
+  font-size: 1.5em;
+}
+
+.bg-primary {
+  color: var(--clr-text-black);
+  background-color: var(--clr-primary-400);
+}
+
+.bg-dark {
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-neutral-900);
+}
+
+.bg-primary h2,
+.bg-dark h2 {
+  color: var(--clr-text-black);
+}
+/* Reduces logo size to fit mobile screen*/
+.logo {
+  margin: 0 auto;
+  display: flex;
+  width: 20%;
+  padding-bottom: 3rem;
+  padding-top: 0rem;
+}
+
+/* Reduces footer size to fit mobile screen*/
+.footer {
+  padding: 3rem;
+  background-color: var(--clr-bg-black);
+  color: var(--clr-primary-400);
+  margin-bottom: 0;
+}
+.footer2 {
+padding-bottom: 1rem;
+padding-top: 1rem;
+}
+
+.aboutusimg {
+  padding-top: 10rem;
+}
+.supportimg {
+  padding-top: 2rem;
+}
+
+.footertext {
+  text-align: center;
+}
+.supportUsHereBtn {
+  font-size: 2rem;
+  padding-top: 4rem;
+}
+/* Text links / Buttons */
+a:link {
+  color: var(--clr-Text-black);
+  background-color: transparent;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+a:visited {
+  color: var(--clr-Text-black);
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: var(--clr-texthover);
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  color: var(--clr-Text-black);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+
+
+
+
+/* Form */
+/* sizes and formats message box area */
+.input,
+.msg .area{
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+  margin-bottom: 2rem;
+  border: var(--clr-primary-200) 2px solid;
+  font-size: 14px;
+  border-radius: 5px;
+  outline: none;
+  transform: all 0.5s ease;
+}
+
+.login .input{
+  width: 48%;
+  float: left;
+  margin-right: 4%;
+}
+
+.login .input:last-child{
+  margin-right: 0;
+}
+
+.msg .area{
+  height: 200px;
+}
+/* Styles button */
+.btn{
+  width: 250px;
+  background: var(--clr-primary-200);
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 5px;
+  margin: 0 auto;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.input:focus,
+.msg .area:focus{
+  border: 2px solid var(--clr-primary-200);
+}
